@@ -2,7 +2,7 @@
 > **Cybernetic Objective Engine & Modular Telemetry Task Suite for Android & iOS**
 
 <p align="center">
-  <img src="./screen.png" width="140" height="140" alt="Kinetic Todo Logo" />
+  <img src="./assets/icon.png" width="140" height="140" alt="Kinetic Todo Logo" />
 </p>
 
 <p align="center">
