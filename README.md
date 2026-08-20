@@ -1,8 +1,8 @@
 # ⬡ KINETIC TODO
-> Monospace terminal-styled task manager with runtime telemetry for Android.
+> **Cybernetic Objective Engine & Modular Telemetry Task Suite for Android & iOS**
 
 <p align="center">
-  <img src="./assets/icon.png" width="120" height="120" alt="Kinetic Todo Logo" />
+  <img src="./assets/icon.png" width="130" height="130" alt="Kinetic Todo Logo" />
 </p>
 
 <p align="center">
@@ -25,12 +25,15 @@ Pre-built standalone Android packages compiled via GitHub Actions:
 
 | Build Target | Size | Recommended For | Link |
 | :--- | :---: | :--- | :--- |
-| **`app-arm64-v8a-release.apk`** | **~11 MB** | Modern Android Devices (64-bit ARM) | [⬇️ Download ARM64](https://github.com/addynoven/KINETIC-TODO/releases/latest/download/app-arm64-v8a-release.apk) |
-| **`app-universal-release.apk`** | **~24 MB** | Emulators & All Chipsets | [⬇️ Download Universal](https://github.com/addynoven/KINETIC-TODO/releases/latest/download/app-universal-release.apk) |
+| **`app-arm64-v8a-release.apk`** *(Recommended)* | **~11 MB** | Modern Android Devices (64-bit ARM) | [⬇️ Download ARM64 APK](https://github.com/addynoven/KINETIC-TODO/releases/latest/download/app-arm64-v8a-release.apk) |
+| **`app-universal-release.apk`** | **~24 MB** | Emulators & All Chipsets | [⬇️ Download Universal APK](https://github.com/addynoven/KINETIC-TODO/releases/latest/download/app-universal-release.apk) |
+| **All Releases & Assets** | — | Changelogs & Previous Versions | [📦 View All Releases](https://github.com/addynoven/KINETIC-TODO/releases) |
 
 ---
 
-## 🖥️ Screen Previews
+## 🖥️ User Interface & Aesthetic
+
+Built with a high-contrast dark terminal interface, monospace typography, segmented telemetry gauges, and a matrix background grid.
 
 <p align="center">
   <img src="./screen/image.png" width="31%" alt="Tasks Screen" />
@@ -38,40 +41,63 @@ Pre-built standalone Android packages compiled via GitHub Actions:
   <img src="./screen/image%20copy%202.png" width="31%" alt="System Screen" />
 </p>
 
+### 1. `TASKS` — Objective Execution Hub
+- **Architecture Overview**: Dynamic header monitoring active and completed objective counters in real time.
+- **Terminal Input**: Command prompt style (`> New objective...`) with rapid `+ ADD` dispatch.
+- **Objective Cards**: High-contrast active focus outlines, completion strikethrough, and single-tap purge.
+- **Batch Processing**: Single-touch `CLEAR ALL COMPLETED` action pipeline.
+
+### 2. `ARCHIVE` — Vaulted Data Store
+- **Query Engine**: Real-time filtering by task title or hex node address.
+- **Hex ID & Delta Timestamps**: Granular provenance tracing (e.g. `0x8F2A1`, `T-04:12:00`).
+- **Classification Badges**: Differentiates between standard `ARCHIVED` and high-priority `VAULTED` records.
+- **Historical Node Loading**: Expandable data streams for deep historical audits.
+
+### 3. `SYSTEM` — Real-Time Diagnostic Dashboard
+- **Kernel Status Banner**: Uptime tracking and semantic build versioning (`■ KERNEL STATUS: ONLINE`).
+- **Task Density Monitor**: 10-stage segmented progress meter with 24-hour delta tracking.
+- **Memory Allocation**: Real-time memory footprint visualization against system ceiling limits.
+- **Sync Latency Histogram**: Multi-bar telemetry chart measuring roundtrip packet latency.
+- **Structured System Logs**: Color-coded diagnostic event log (`INFO`, `ACTION`, `WARN`, `CRON`) with log export.
+
 ---
 
-## ⚡ Key Highlights
-
-* **Terminal-Inspired Aesthetics**: High-contrast dark theme, monospace typography, grid background, and prompt-style inputs.
-* **Archived Records with Hash IDs**: Completed items store historical timestamps (`T-04:12:00`) and hex identifier tags (`0x8F2A1`) for quick audit searching.
-* **System Telemetry Screen**: Real-time diagnostic tab monitoring JS heap allocation, simulated roundtrip latency histogram, and categorized application log streams (`INFO`, `WARN`, `ACTION`).
-* **Optimized Binary Size**: Standalone production build compressed to ~11 MB utilizing Hermes engine bytecodes and React Native New Architecture.
-
----
-
-## 🏗️ Architecture
+## 🏗️ Architecture & Philosophy
 
 Organized using a **Feature-Driven Modular Architecture** (MVVM) to keep UI components, business logic, and data layer decoupled:
 
 ```
 src/
 ├── core/                        # Global foundational systems
-│   ├── components/              # Shared UI (GridBackground, Navigation)
-│   ├── errors/                  # ErrorBoundary & logging pipelines
-│   └── theme/                   # Palette tokens & typography
+│   ├── components/              # Shared UI (GridBackground, AppHeader, BottomNav)
+│   ├── errors/                  # ErrorBoundary & structured error handler
+│   └── theme/                   # Terminal color palette, spacing, typography
 │
-└── features/                    # Feature modules (tasks, archive, system)
-    └── [feature]/
-        ├── components/          # Presentational UI elements
-        ├── hooks/               # State machine & lifecycle hooks
-        ├── services/            # Pure business logic & validations
-        ├── repositories/        # Storage abstraction layer
-        └── [feature]_screen.tsx # Top-level screen container
+└── features/                    # Feature-Driven Modular Units
+    ├── tasks/                   # Objective Management Feature
+    │   ├── components/          # TaskInput, TaskItem, TaskHeaderStats
+    │   ├── hooks/               # useTask, task_action_pipeline
+    │   ├── models/              # tasks.types.ts
+    │   ├── repositories/        # task.repository.ts
+    │   ├── services/            # task.service.ts
+    │   ├── validation/          # task.validator.ts
+    │   └── tasks_screen.tsx
+    │
+    ├── archive/                 # Data Vault & Query Feature
+    │   ├── components/          # ArchiveSearch, ArchiveItem
+    │   ├── models/              # archive.types.ts
+    │   ├── services/            # archive.service.ts
+    │   └── archive_screen.tsx
+    │
+    └── system/                  # Telemetry & Diagnostics Feature
+        ├── components/          # MetricCard, SegmentedBar, LatencyHistogram, SystemLogs
+        ├── models/              # system.types.ts
+        └── system_screen.tsx
 ```
 
 ---
 
-## 🚀 Development Setup
+## 🚀 Development & Local Builds
 
 ### 1. Install Dependencies
 ```bash
@@ -79,25 +105,39 @@ bun install
 # or: npm install
 ```
 
-### 2. Run Local Dev Server
+### 2. Start Development Server
 ```bash
 bun start
-# Press 'a' to open Android emulator
+# or: npx expo start
 ```
 
-### 3. Build Standalone Release APK
+### 3. Run on Device / Emulator
+```bash
+# Debug mode (hot reloading)
+bun run android
+
+# Release mode (standalone)
+bun run android:release
+```
+
+### 4. Build Standalone Release APK Locally
 ```bash
 bun run build:apk
 ```
-
-*Output artifact:* `android/app/build/outputs/apk/release/app-arm64-v8a-release.apk`
+*Output artifact:* `android/app/build/outputs/apk/release/app-arm64-v8a-release.apk` (~11 MB)
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Runtime**: React Native 0.81.5 (Hermes JS Engine + New Architecture)
-* **Framework**: Expo SDK 54
-* **Language**: TypeScript 5.9 (Strict Type Checking)
-* **Icons**: `@expo/vector-icons`
-* **CI/CD**: GitHub Actions workflow for automated tagging and APK release builds
+- **Runtime**: [React Native 0.81.5](https://reactnative.dev/) with Hermes JS Engine & New Architecture
+- **Framework**: [Expo SDK 54](https://docs.expo.dev/)
+- **Icons**: `@expo/vector-icons` (Octicons, MaterialCommunityIcons)
+- **Safe Area**: `react-native-safe-area-context`
+- **Compiler**: TypeScript 5.9 (Strict Type Safety)
+
+---
+
+<p align="center">
+  <sub>Engineered with Clean Architecture & Modular MVVM Principles.</sub>
+</p>
