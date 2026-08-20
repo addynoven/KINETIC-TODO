@@ -1,9 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, View } from "react-native";
-
 import { colors } from "./src/core/theme";
-import { TrackerScreen } from "./src/features/tracker/components/TrackerScreen";
+import { StarterScreen } from "./src/features/template/TemplateScreen";
 
 export default function App() {
   return (
@@ -11,7 +10,7 @@ export default function App() {
       <SafeAreaView style={styles.safeArea}>
         <StatusBar style="dark" />
         <View style={styles.container}>
-          <TrackerScreen />
+          <StarterScreen />
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

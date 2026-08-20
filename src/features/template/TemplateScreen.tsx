@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import { colors, radius, spacing } from "../../../core/theme";
+import { colors, radius, spacing } from "../../core/theme";
 
-export function TrackerScreen() {
+export function StarterScreen() {
   return (
     <View style={styles.card}>
-      <Text style={styles.eyebrow}>Tracker</Text>
-      <Text style={styles.title}>Welcome to your app</Text>
+      <Text style={styles.eyebrow}>Starter</Text>
+      <Text style={styles.title}>Your app starts here</Text>
       <Text style={styles.text}>
-        This starter screen gives you a clean base to build your daily activity
-        tracking features.
+        This is a clean template for building your next product. Replace this
+        screen with your own features and flows.
       </Text>
     </View>
   );
