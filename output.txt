@@ -1,0 +1,30 @@
+.
+├── AGENTS.md
+├── app.json
+├── App.tsx
+├── assets
+│   ├── adaptive-icon.png
+│   ├── favicon.png
+│   ├── icon.png
+│   └── splash-icon.png
+├── bun.lock
+├── CLAUDE.md
+├── .gitignore
+├── index.ts
+├── output.txt
+├── package.json
+├── src
+│   ├── core
+│   │   ├── api
+│   │   ├── storage
+│   │   └── theme
+│   └── features
+│       └── tracker
+│           ├── components
+│           ├── hooks
+│           ├── models
+│           ├── repositories
+│           └── services
+└── tsconfig.json
+
+14 directories, 14 files
