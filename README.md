@@ -1,9 +1,9 @@
-# ⬡ KINETIC LOGIC (KL)
+# ⬡ KINETIC TODO
 
 > **Cybernetic Objective Engine & Modular Telemetry Task Suite for Android & iOS**
 
 <p align="center">
-  <img src="./assets/icon.png" width="140" height="140" alt="Kinetic Logic Logo" />
+  <img src="./assets/adaptive-icon.png" width="140" height="140" alt="Kinetic Todo Logo" />
 </p>
 
 <p align="center">
@@ -12,17 +12,6 @@
   <code>EXPO SDK: 54.0</code> • 
   <code>REACT NATIVE: 0.81.5</code>
 </p>
-
----
-
-## ⚡ App Name Proposals (Based on `KL` Logo)
-
-| Name                                | Theme & Vibe                    | Rationale                                                                   |
-| :---------------------------------- | :------------------------------ | :-------------------------------------------------------------------------- |
-| **`KINETIC LOGIC`** _(Recommended)_ | Cyber-Terminal / System Control | Matches the `KINETIC_TODO` terminal header and computation/telemetry theme. |
-| **`KINETIC LOOP`**                  | Habit & Objective Lifecycle     | Emphasizes recursive task execution and iterative progress loops.           |
-| **`KERNEL LOCK`**                   | Security & High-Performance     | Reflects the kernel diagnostic monitor and vaulted archive security.        |
-| **`KINETIC LINK`**                  | Network / Telemetry Sync        | Highlights real-time latency diagnostics and distributed task sync.         |
 
 ---
 
@@ -119,7 +108,7 @@ npx expo prebuild --platform android --clean
 cd android && ./gradlew assembleRelease
 ```
 
-Output APKs will be located at:
+Output APKs are located at:
 `android/app/build/outputs/apk/release/app-arm64-v8a-release.apk` (~11 MB)
 
 ---
