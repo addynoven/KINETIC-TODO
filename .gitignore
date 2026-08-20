@@ -9,8 +9,13 @@ dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# Native & Build outputs
+.gradle/
 .kotlin/
+.cxx/
+build/
+*.apk
+*.aab
 *.orig.*
 *.jks
 *.p8
@@ -21,21 +26,23 @@ expo-env.d.ts
 # Metro
 .metro-health-check*
 
-# debug
+# debug & temporary
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+errors/
 
-# macOS
+# OS
 .DS_Store
 *.pem
 
 # local env files
 .env*.local
+.env
 
 # typescript
 *.tsbuildinfo
 
-# generated native folders
+# generated native folders (generated on CI via expo prebuild)
 /ios
 /android
