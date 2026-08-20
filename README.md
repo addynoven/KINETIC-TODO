@@ -6,11 +6,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/addynoven/react_native_learning/releases/latest">
-    <img src="https://img.shields.io/github/v/release/addynoven/react_native_learning?style=for-the-badge&color=FFFFFF&labelColor=0B0C0E&logo=github" alt="Latest Release" />
+  <a href="https://github.com/addynoven/KINETIC-TODO/releases/latest">
+    <img src="https://img.shields.io/github/v/release/addynoven/KINETIC-TODO?style=for-the-badge&color=FFFFFF&labelColor=0B0C0E&logo=github" alt="Latest Release" />
   </a>
-  <a href="https://github.com/addynoven/react_native_learning/releases">
-    <img src="https://img.shields.io/github/downloads/addynoven/react_native_learning/total?style=for-the-badge&color=22C55E&labelColor=0B0C0E&logo=android&logoColor=white" alt="Total Downloads" />
+  <a href="https://github.com/addynoven/KINETIC-TODO/releases">
+    <img src="https://img.shields.io/github/downloads/addynoven/KINETIC-TODO/total?style=for-the-badge&color=22C55E&labelColor=0B0C0E&logo=android&logoColor=white" alt="Total Downloads" />
   </a>
   <img src="https://img.shields.io/badge/EXPO_SDK-54.0-0B0C0E?style=for-the-badge&logo=expo&logoColor=white" alt="Expo SDK 54" />
   <img src="https://img.shields.io/badge/ARCH-MVVM-0B0C0E?style=for-the-badge" alt="Clean Architecture" />
@@ -24,9 +24,9 @@ Get the latest optimized build directly for your Android device:
 
 | Package | Size | Target | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **`app-arm64-v8a-release.apk`** *(Recommended)* | **~11 MB** | Modern Android Phones (64-bit ARM) | [⬇️ Download ARM64 APK](https://github.com/addynoven/react_native_learning/releases/latest/download/app-arm64-v8a-release.apk) |
-| **`app-universal-release.apk`** | **~24 MB** | All Android Devices & Emulators | [⬇️ Download Universal APK](https://github.com/addynoven/react_native_learning/releases/latest/download/app-universal-release.apk) |
-| **All Releases & Assets** | — | Release Changelogs & Previous Versions | [📦 View All Releases](https://github.com/addynoven/react_native_learning/releases) |
+| **`app-arm64-v8a-release.apk`** *(Recommended)* | **~11 MB** | Modern Android Phones (64-bit ARM) | [⬇️ Download ARM64 APK](https://github.com/addynoven/KINETIC-TODO/releases/latest/download/app-arm64-v8a-release.apk) |
+| **`app-universal-release.apk`** | **~24 MB** | All Android Devices & Emulators | [⬇️ Download Universal APK](https://github.com/addynoven/KINETIC-TODO/releases/latest/download/app-universal-release.apk) |
+| **All Releases & Assets** | — | Release Changelogs & Previous Versions | [📦 View All Releases](https://github.com/addynoven/KINETIC-TODO/releases) |
 
 ---
 
