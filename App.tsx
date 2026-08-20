@@ -1,18 +1,45 @@
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, View } from "react-native";
+
+import { AppErrorBoundary } from "./src/core/errors/ErrorBoundary";
 import { colors } from "./src/core/theme";
-import { StarterScreen } from "./src/features/template/TemplateScreen";
+import { AppHeader } from "./src/core/components/AppHeader";
+import { BottomNav, NavTab } from "./src/core/components/BottomNav";
+import { GridBackground } from "./src/core/components/GridBackground";
+import { TasksScreen } from "./src/features/tasks/tasks_screen";
+import { ArchiveScreen } from "./src/features/archive/archive_screen";
+import { SystemScreen } from "./src/features/system/system_screen";
 
 export default function App() {
+  const [currentTab, setCurrentTab] = useState<NavTab>("tasks");
+
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.safeArea}>
-        <StatusBar style="dark" />
-        <View style={styles.container}>
-          <StarterScreen />
-        </View>
-      </SafeAreaView>
+      <AppErrorBoundary>
+        <SafeAreaView style={styles.safeArea}>
+          <StatusBar style="light" backgroundColor={colors.background} />
+
+          <GridBackground>
+            {/* TERMINAL HEADER */}
+            <AppHeader showPrefix={currentTab === "tasks"} />
+
+            {/* SCREEN CONTENT */}
+            <View style={styles.screenContainer}>
+              {currentTab === "tasks" ? <TasksScreen /> : null}
+              {currentTab === "archive" ? <ArchiveScreen /> : null}
+              {currentTab === "system" ? <SystemScreen /> : null}
+            </View>
+
+            {/* BOTTOM TAB NAVIGATION */}
+            <BottomNav
+              currentTab={currentTab}
+              onSelectTab={setCurrentTab}
+            />
+          </GridBackground>
+        </SafeAreaView>
+      </AppErrorBoundary>
     </SafeAreaProvider>
   );
 }
@@ -22,11 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-  container: {
+  screenContainer: {
     flex: 1,
-    justifyContent: "center",
-    paddingHorizontal: 20,
-    paddingVertical: 24,
-    backgroundColor: colors.background,
   },
 });

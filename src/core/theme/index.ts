@@ -1,24 +1,51 @@
+import { Platform } from "react-native";
+
 export const colors = {
-  background: "#F4F7FB",
-  card: "#FFFFFF",
-  primary: "#2F6EF7",
-  primarySoft: "#EAF2FF",
-  text: "#101828",
-  muted: "#5F6B7A",
-  border: "#DCE5F2",
-  success: "#16A34A",
+  background: "#0B0C0E",
+  backgroundSecondary: "#121419",
+  card: "#15171E",
+  cardBorder: "#222733",
+  cardBorderHighlight: "#FFFFFF",
+  primary: "#FFFFFF",
+  primaryDark: "#0B0C0E",
+  text: "#FFFFFF",
+  textSecondary: "#8E95A5",
+  textMuted: "#525969",
+  muted: "#525969",
+  border: "#202530",
+  borderSubtle: "#181C24",
+  gridLine: "#161922",
+  accent: "#FFFFFF",
+  tagDark: "#1E222B",
+  tagDarkText: "#D0D6E0",
+  tagLight: "#FFFFFF",
+  tagLightText: "#0B0C0E",
+  warn: "#FF6363",
+  warnSoft: "rgba(255, 99, 99, 0.15)",
+  success: "#22C55E",
 };
 
 export const spacing = {
+  xxs: 4,
   xs: 8,
   sm: 12,
   md: 16,
-  lg: 24,
-  xl: 32,
+  lg: 20,
+  xl: 24,
+  xxl: 32,
 };
 
 export const radius = {
-  sm: 12,
-  md: 16,
-  lg: 24,
+  xs: 2,
+  sm: 4,
+  md: 6,
+  lg: 8,
+};
+
+export const typography = {
+  mono: Platform.select({
+    ios: "Menlo",
+    android: "monospace",
+    default: "monospace",
+  }),
 };
