@@ -6,3 +6,7 @@ export interface Task {
 }
 
 export type CreateTaskDTO = Pick<Task, "title">;
+
+export type UpdateTaskDTO = Partial<
+  Pick<Task, "title">
+>;
